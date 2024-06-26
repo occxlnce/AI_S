@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="{{ url_for('static', filename='AI1.JPG') }}" alt="AI Tools">
+            <div class="hero-text">
+                <h1>AI Tools Impact Survey</h1>
+                <p>We value your input to understand the impact of AI tools on academic performance.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form action="{{ url_for('submit') }}" method="post">
+            <div class="form-group">
+                <label for="usage">1. How often do you use AI tools (e.g., ChatGPT, code assistants) for your academic work?</label>
+                <select id="usage" name="usage">
+                    <option value="Daily">Daily</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Never">Never</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="impact">2. Since using AI tools, how would you rate the impact on your academic performance?</label>
+                <select id="impact" name="impact">
+                    <option value="1">1 (Very Negative)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Very Positive)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="marks_range">3. In which range do your academic marks fall since you started using AI tools?</label>
+                <select id="marks_range" name="marks_range">
+                    <option value="50-59">50-59</option>
+                    <option value="60-69">60-69</option>
+                    <option value="70-79">70-79</option>
+                    <option value="80-89">80-89</option>
+                    <option value="90-99">90-99</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hours_per_week">4. On average, how many hours per week do you spend using AI tools for your studies?</label>
+                <select id="hours_per_week" name="hours_per_week">
+                    <option value="0-2 hours">0-2 hours</option>
+                    <option value="3-5 hours">3-5 hours</option>
+                    <option value="6-8 hours">6-8 hours</option>
+                    <option value="9-11 hours">9-11 hours</option>
+                    <option value="12+ hours">12 or more hours</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="benefit">5. On a scale of 1 to 5, how beneficial do you find AI tools for enhancing your research activities?</label>
+                <select id="benefit" name="benefit">
+                    <option value="1">1 (Not Beneficial)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Extremely Beneficial)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="challenging">6. On a scale of 1 to 5, how challenging do you find technical issues when using AI tools?</label>
+                <select id="challenging" name="challenging">
+                    <option value="1">1 (Not Challenging)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Extremely Challenging)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="grade_improvement">7. By what percentage do you believe your grades have improved since you started using AI tools?</label>
+                <select id="grade_improvement" name="grade_improvement">
+                    <option value="0-10%">0-10%</option>
+                    <option value="11-20%">11-20%</option>
+                    <option value="21-30%">21-30%</option>
+                    <option value="31-40%">31-40%</option>
+                    <option value="41+%">41% or more</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
